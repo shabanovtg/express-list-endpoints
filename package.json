@@ -3,7 +3,7 @@
   "version": "7.1.0",
   "description": "A express package to list all registered endpoints and its verbs",
   "license": "MIT",
-  "repository": "AlbertoFdzM/express-list-endpoints",
+  "repository": "shabanovtg/express-list-endpoints",
   "engines": {
     "node": ">=18"
   },
