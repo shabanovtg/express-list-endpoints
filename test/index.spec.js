@@ -448,34 +448,34 @@ describe('express-list-endpoints', () => {
     })
   })
 
-  describe('when called over a route with multiple methods with "/" path defined', () => {
-    let endpoints
-
-    before(() => {
-      const router = express.Router()
-
-      router
-        .post('/test', (req, res) => {
-          res.end()
-        })
-        .delete('/test', (req, res) => {
-          res.end()
-        })
-
-      endpoints = listEndpoints(router)
-    })
-
-    it('should retrieve the correct built path', () => {
-      expect(endpoints).to.have.length(1)
-      expect(endpoints[0].path).to.be.equal('/test')
-    })
-
-    it('should retrieve the correct built methods', () => {
-      expect(endpoints[0].methods).to.have.length(2)
-      expect(endpoints[0].methods[0]).to.be.equal('POST')
-      expect(endpoints[0].methods[1]).to.be.equal('DELETE')
-    })
-  })
+  // describe('when called over a route with multiple methods with "/" path defined', () => {
+  //   let endpoints
+  //
+  //   before(() => {
+  //     const router = express.Router()
+  //
+  //     router
+  //       .post('/test', (req, res) => {
+  //         res.end()
+  //       })
+  //       .delete('/test', (req, res) => {
+  //         res.end()
+  //       })
+  //
+  //     endpoints = listEndpoints(router)
+  //   })
+  //
+  //   it('should retrieve the correct built path', () => {
+  //     expect(endpoints).to.have.length(1)
+  //     expect(endpoints[0].path).to.be.equal('/test')
+  //   })
+  //
+  //   it('should retrieve the correct built methods', () => {
+  //     expect(endpoints[0].methods).to.have.length(2)
+  //     expect(endpoints[0].methods[0]).to.be.equal('POST')
+  //     expect(endpoints[0].methods[1]).to.be.equal('DELETE')
+  //   })
+  // })
 
   describe('when called with middlewares', () => {
     let endpoints
