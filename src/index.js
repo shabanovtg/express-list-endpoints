@@ -155,24 +155,9 @@ const parseEndpoints = function (app, basePath, endpoints) {
  * @returns {Endpoint[]} Updated endpoints array
  */
 const addEndpoints = function (currentEndpoints, endpointsToAdd) {
-  endpointsToAdd.forEach((newEndpoint) => {
-    const existingEndpoint = currentEndpoints.find(
-      (endpoint) => endpoint.path === newEndpoint.path
-    )
-
-    if (existingEndpoint !== undefined) {
-      const newMethods = newEndpoint.methods.filter(
-        (method) => !existingEndpoint.methods.includes(method)
-      )
-
-      existingEndpoint.methods = existingEndpoint.methods.concat(newMethods)
-    } else {
-      currentEndpoints.push(newEndpoint)
-    }
-  })
-
+  currentEndpoints.push(...endpointsToAdd);
   return currentEndpoints
-}
+};
 
 /**
  * @param {any[]} stack
