@@ -155,9 +155,9 @@ const parseEndpoints = function (app, basePath, endpoints) {
  * @returns {Endpoint[]} Updated endpoints array
  */
 const addEndpoints = function (currentEndpoints, endpointsToAdd) {
-  currentEndpoints.push(...endpointsToAdd);
+  currentEndpoints.push(...endpointsToAdd)
   return currentEndpoints
-};
+}
 
 /**
  * @param {any[]} stack
