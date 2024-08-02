@@ -1,5 +1,5 @@
 {
-  "name": "express-list-endpoints",
+  "name": "express-list-endpoints-separate-methods",
   "version": "7.1.1",
   "description": "A express package to list all registered endpoints and its verbs",
   "license": "MIT",
